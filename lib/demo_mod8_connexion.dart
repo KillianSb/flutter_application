@@ -76,7 +76,7 @@ class _FormWidgetState extends State<FormWidget> {
                                       content: Text("Connecté !")
                                   ),
                               );
-                              context.go('/page2');
+                              context.go('/page2/${textControllerIdentifiant.text}');
                             }else{
                               ScaffoldMessenger.of(context).showSnackBar(
                                   const SnackBar(

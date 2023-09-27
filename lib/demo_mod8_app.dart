@@ -18,8 +18,10 @@ class MyApp extends StatelessWidget {
         builder: (context, state) => const FormWidget(),
       ),
       GoRoute(
-        path: '/page2',
-        builder: (context, state) => const SecondPage(),
+        path: '/page2/:email',
+        builder: (context, state) => SecondPage(
+            state.pathParameters["email"] ?? ""
+        ),
       ),
     ],
   );
